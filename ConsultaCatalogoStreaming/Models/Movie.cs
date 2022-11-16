@@ -1,14 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace ConsultaCatalogoStreaming.Models
 {
-    public class Result
-    {
-        //[JsonPropertyName("results")]
-        //Movie[] results { get; set; }  
-        int total_pages { get; set; }
-    }
+
     public class Movie
     {
         [JsonPropertyName("imdbID")]
@@ -31,31 +25,6 @@ namespace ConsultaCatalogoStreaming.Models
         //public int age { get; set; }
         //public StreamingInfo streamingInfo { get; set; }
         //public string originalLanguage { get; set; }
-
-
-
-    }
-    public class Netflix
-    {
-        public Us us { get; set; }
-    }
-
-    public class Root
-    {
-        public List<Result> results { get; set; }
-        public int total_pages { get; set; }
-    }
-
-    public class StreamingInfo
-    {
-        public Netflix netflix { get; set; }
-    }
-
-    public class Us
-    {
-        public string link { get; set; }
-        public int added { get; set; }
-        public int leaving { get; set; }
     }
 
 }

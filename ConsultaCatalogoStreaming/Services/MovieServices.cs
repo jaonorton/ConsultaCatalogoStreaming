@@ -39,7 +39,7 @@ namespace ConsultaCatalogoStreaming.Services
             foreach (var item in _streamings)
             {
                 string resposta = await client.GetStringAsync("https://streaming-availability.p.rapidapi.com/search/basic?country=us&service=" + item  +  "&type=movie&keyword=El%20Camino%20&page=1&output_language=en&language=en");
-                Result filme = JsonConvert.DeserializeObject<Result>(resposta);
+                Results filme = JsonConvert.DeserializeObject<Results>(resposta);
 
                 if (filme != null)
                 {
